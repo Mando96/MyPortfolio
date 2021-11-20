@@ -1,28 +1,34 @@
 /* CSS Document */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 
 }
 
-/*---Nav-Bar---*/
+/*---------------------------Nav-Bar-----------------------*/
+
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
     background-color: cadetblue;
-    font-family: 'Poppins', sans-serif;
 }
 
 .logo {
    cursor: pointer;
-   color: rgb(226, 226, 226);
    text-transform: uppercase;
    letter-spacing: 5px;
    font-size: 20px;
 }
+
+.logo a {
+  text-decoration: none;
+  color: rgb(226, 226, 226);
+ }
 
 .connect {
     display: flex;
@@ -42,6 +48,11 @@ nav{
     font-size: 14px;
 }
 
+.connect li a img{
+    width: 25px;
+    height: 25px;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-around;
@@ -57,7 +68,7 @@ nav{
     text-decoration: none;
     letter-spacing:3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 50px;
 }
 
 .nav-links li a {
@@ -74,13 +85,14 @@ nav{
     background-color: aquamarine;
     margin: 5px;
     transition: all 0.4s ease;
-
 }
+
 .burger{
     display: none;
     cursor: pointer;
 }
-/*---Nav-Bar-ENDs--*/
+
+/*---------------------------Nav-Bar End -----------------------*/
 
 main {
     width: 100%;
@@ -91,35 +103,51 @@ main {
     align-items: center;
 } 
 
-/*---Hero-Section---*/
-.presentation {
+/*--------------------------Section 1-----------------------------*/
+.contain{
     display: flex;
+    justify-content: space-around;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     margin: auto;
     height: 95vh;
     align-items: center;
+    
 }
 
-.introduction {
+.image {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
 }
 
-.intro-text h1 {
+.text{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: blanchedalmond;
+    position: absolute;
+    right: 0;
+}
+
+.text h1 {
     font-size: 44px;
     font-weight: 500;
-    background: linear-gradient(to right, #494964, #6f6f89);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+   /* background: linear-gradient(to right, #494964, #6f6f89);*/
 }
 
-.intro-text p {
+.text p {
     margin-top: 5px;
     font-size: 22px;
     color: #010108;
 }
 
-/*.cta {
+/*--------------------------Section 2-----------------------------*/
+
+////////////////////////////////////
+
+.cta {
     padding: 50px 0px 0px 0px;
 }
 
@@ -143,49 +171,28 @@ main {
     color: white;
     margin: 30px 0px 0px 30px;
 }
-*/
-.cover {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+
+///////////////////////////////////
+
+.body-img {
+	position:fixed;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+    width: 50%;
+
+
 
 }
-
-.big-circle {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: -1;
-    opacity: 0.5;
-    height: 80%;
-}
-
-.medium-circle {
-    position: absolute;
-    top: 30%;
-    right: 30%;
-    z-index: -1;
-    height: 60%;
-    opacity: 0.4;
-}
-
-.small-circle {
-    position: absolute;
-    bottom: 0%;
-    left: 20%;
-    z-index: -1;
-}
-/*---Hero-Section ENDs---*/
-
-
 /*Mobile responsivness*/
-@media screen and (max-width:1500px) {
+@media screen and (max-width:7000px) {
     body{
-        overflow: hidden;
+        overflow: hidden visible;
     }
     .nav-links{
         position: absolute;
         right: 0px;
+        left: 0px;
         height: 92vh;
         top: 8vh;
         background-color:cadetblue;
@@ -196,6 +203,7 @@ main {
         list-style: none;
         transform: translateX(100%);
         transition: transform 0.7s ease-in;
+        padding: 0 95px 0 0;
     }
     .nav-links li{
         opacity: 0;

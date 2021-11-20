@@ -13,18 +13,18 @@
     <body>
         <nav>
             <div class="logo">
-                <h1>Emmanuel</h1>
+                <a href="index.html"><h1>Emmanuel</h1></a>
             </div>
             <ul class="connect">
-                <li><a  href="git.html">g</a></li>
-                <li><a  href="twitter.html">t</a></li>
-                <li><a  href="insta.html">i</a></li>
+                <li><a  href="https://github.com/Mando96"><img src="img/git3.svg" alt="Git"></a></li>
+                <li><a  href="https://www.linkedin.com/in/emmanuelokeowo/"><img src="img/ln5.svg" alt="Linkein"></a></li>
+                <li><a  href="https://twitter.com/MandoOlu"><img src="img/twitter1.svg" alt="Twitter"></a></li>
             </ul>
             <ul class="nav-links">
                 <li><a class="nav-link" href="index.html">Home</a></li>
-                <li><a class="nav-link" href="index.html">Projects</a></li>
+                <li><a class="nav-link" href="index.html#projects">Projects</a></li>
                 <li><a class="nav-link" href="aboutme.html">About</a></li>
-                <li><a class="nav-link" href="index.html">Contact</a></li>
+                <li><a class="nav-link" href="index.html#contact">Contact</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -34,11 +34,11 @@
         </nav>
         <main>
             <!-- Intro -->
-            <section class="presentation">
-                <div class="cover">
+            <div class="contain">
+                <div class="image">
                     <img src="img/intro.jpg" alt="tribeteq" height="500px" width="800px"/>
                 </div>
-                <div class="introduction">
+                <div class="text">
                     <div class="intro-text">
                         <h1>EMMANUEL OKEOWO</h1>
                         <p>
@@ -50,9 +50,9 @@
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
              <!-- Project 1 -->
-            <section class="presentation">
+            <section class="presentation" id="projects">
                 <div class="introduction">
                     <div class="intro-text">
                         <h1>Tribe TEQ</h1>
@@ -124,7 +124,7 @@
                 </div>
             </section>
              <!-- Contact me -->
-             <section class="presentation">
+             <section class="presentation" id="contact">
                 <div class="introduction">
                     <div class="intro-text">
                         <h1>Contact Me</h1>
@@ -138,6 +138,7 @@
                 </div>
             </section>
         </main>
+        <img class="body-img" src="img/body.svg" alt="">
         <script src="app.js"></script>
     </body>
 </html>
