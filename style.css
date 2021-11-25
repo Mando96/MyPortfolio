@@ -127,7 +127,6 @@ main {
     display: flex;
     justify-content: center;
     background-color: blanchedalmond;
-    position: absolute;
     right: 0;
 }
 
@@ -144,8 +143,6 @@ main {
 }
 
 /*--------------------------Section 2-----------------------------*/
-
-////////////////////////////////////
 
 .cta {
     padding: 50px 0px 0px 0px;
@@ -172,7 +169,7 @@ main {
     margin: 30px 0px 0px 30px;
 }
 
-///////////////////////////////////
+/*//////////////////////////////////*/
 
 .body-img {
 	position:fixed;
