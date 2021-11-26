@@ -1,3 +1,6 @@
+const text = document.getElementsByClassName('text')
+
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -25,5 +28,7 @@ const navSlide = () => {
  });
    
 }
+
+
 
 navSlide();

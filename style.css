@@ -120,6 +120,11 @@ main {
     display: flex;
     justify-content: center;
     background-color: bisque;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+  
 }
 
 .text{
@@ -127,7 +132,9 @@ main {
     display: flex;
     justify-content: center;
     background-color: blanchedalmond;
-    right: 0;
+    top: 100px;
+    right: 60px;
+    position: relative;
 }
 
 .text h1 {
@@ -148,18 +155,27 @@ main {
     padding: 50px 0px 0px 0px;
 }
 
-.cta-select {
-    border: 2px solid rgb(22, 145, 22);
+.cta-select{
+    border: 2px solid rgb(4, 173, 185);
+    border-radius: 25px;
     background: transparent;
-    color: rgb(22, 145, 22);
+    color: rgb(4, 173, 185);
     width: 150px;
     height: 50px;
     cursor: pointer;
     font-size: 16px;
+    position: relative;
+}
+
+.cta-select:hover{ 
+    
+    animation: cta 5s linear 0s infinite;
+
 }
 
 .cta-add {
-    background: rgb(22, 145, 22);
+    background: rgb(4, 173, 185);
+    border-radius: 25px;
     width: 150px;
     height: 50px;
     cursor: pointer;
@@ -225,6 +241,14 @@ main {
         opacity: 1;
         transform: translateX(50px);
     }
+}
+
+@keyframes cta{
+    0%   {bottom:0px;}
+    25%  {bottom:150px;}
+    50%  {bottom:200px;}
+    75%  {bottom:250px;}
+    100% {bottom:0px;}
 }
 
 .toggle .line1{
