@@ -5,17 +5,23 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    overflow-wrap: hidden;
 
 }
 
 /*---------------------------Nav-Bar-----------------------*/
+
+.container{
+    position: relative;
+}
 
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: cadetblue;
+    position:sticky;
+    top: 0;
 }
 
 .logo {
@@ -34,6 +40,7 @@ nav{
     display: flex;
     justify-content: space-around;
     width: 30%;
+    background-color:rgb(33, 97, 90);
 }
 
 .connect li {
@@ -53,10 +60,34 @@ nav{
     height: 25px;
 }
 
+/*.nav-links{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(8, 86, 88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 0.7s ease-in;
+    padding: 0 95px 0 0;
+}
+.nav-links li{
+    opacity: 0;
+}
+.burger{
+    display: block;
+}*/
+
 .nav-links {
     display: flex;
     justify-content: space-around;
     width: 30%;
+    background-color:rgb(33, 97, 90);
 }
 
 .nav-links li {
@@ -101,58 +132,64 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 50px;
 } 
 
 /*--------------------------Section 1-----------------------------*/
 .contain{
     display: flex;
-    justify-content: space-around;
     width: 100%;
+    height: 95vh;
     padding: 10px;
     margin: auto;
-    height: 95vh;
-    align-items: center;
-    
+    position: relative;
+    top:0px;
 }
 
 .image {
     flex: 1;
     display: flex;
+    padding: 0px 300px 0px 0px;
     justify-content: center;
-    background-color: bisque;
-    transition-property: width;
-    transition-duration: 2s;
-    transition-timing-function: linear;
-    transition-delay: 1s;
+    position:absolute;
+    top: 0px;
+    right: 250px;
+    z-index: 1;
   
 }
 
 .text{
     flex: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    background-color: blanchedalmond;
-    top: 100px;
-    right: 60px;
-    position: relative;
+    padding: 100px 10px 50px 10px;
+    position:absolute;
+    top: 0px;
+    right: 15px;
+    z-index: 2;
 }
 
 .text h1 {
-    font-size: 44px;
-    font-weight: 500;
-   /* background: linear-gradient(to right, #494964, #6f6f89);*/
+    font-size: 50px;
+    font-weight: 600;
+    color: beige;
+    /*background: linear-gradient(to right, #494964, #6f6f89);*/
 }
 
 .text p {
     margin-top: 5px;
     font-size: 22px;
-    color: #010108;
+    color: beige;
 }
 
 /*--------------------------Section 2-----------------------------*/
 
 .cta {
-    padding: 50px 0px 0px 0px;
+    padding: 50px 50px 50px 50px;
+    align-items: center;
 }
 
 .cta-select{
@@ -164,12 +201,11 @@ main {
     height: 50px;
     cursor: pointer;
     font-size: 16px;
-    position: relative;
 }
 
 .cta-select:hover{ 
     
-    animation: cta 5s linear 0s infinite;
+    animation: cta 0.3s linear 0s infinite;
 
 }
 
@@ -188,48 +224,93 @@ main {
 /*//////////////////////////////////*/
 
 .body-img {
-	position:fixed;
+	position: fixed;
 	top: 0px;
 	right: 0px;
 	z-index: -1;
-    width: 50%;
+    width: 100%;
+    height: 100%;
 
 
 
 }
 /*Mobile responsivness*/
-@media screen and (max-width:7000px) {
+
+@media screen and (max-width: 946px){
+
     body{
-        overflow: hidden visible;
+        overflow: hidden;
     }
-    .nav-links{
-        position: absolute;
-        right: 0px;
-        left: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color:cadetblue;
+    .contain{
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin: auto;
+        position: relative;
+        
+        
+    }
+    
+    .image {
+        flex: 1;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        order: 2;
+        
+    }
+    
+    .text{
+        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        list-style: none;
-        transform: translateX(100%);
-        transition: transform 0.7s ease-in;
-        padding: 0 95px 0 0;
+        justify-content: center;
+        padding: 10px;
+        order: 1;
+        position: absolute;
+    
     }
-    .nav-links li{
-        opacity: 0;
+    
+    .text h1 {
+        font-size: 50px;
+        font-weight: 600;
+        color: beige;
+        /*background: linear-gradient(to right, #494964, #6f6f89);*/
     }
-    .burger{
-        display: block;
+    
+    .text p {
+        margin-top: 5px;
+        font-size: 22px;
+        color: beige;
     }
-}
 
+}
+   
 .nav-active{
-    transform: translateX(0%);
+    transform: translate(0%);
 }
 
+.nav-inactive{
+    transform: translate(100%);
+}
+
+/*Canvas */
+#canvas1{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: radial-gradient(#22C1C3, #FDBB2D);*/
+    background-image: url("img/goku.jpg") ;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
 
 /* Animations*/
 @keyframes navLinkFade{
@@ -245,9 +326,9 @@ main {
 
 @keyframes cta{
     0%   {bottom:0px;}
-    25%  {bottom:150px;}
-    50%  {bottom:200px;}
-    75%  {bottom:250px;}
+    25%  {bottom:0px;}
+    50%  {bottom:0px;}
+    75%  {bottom:5px;}
     100% {bottom:0px;}
 }
 
